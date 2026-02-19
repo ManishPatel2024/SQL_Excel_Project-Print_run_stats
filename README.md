@@ -2,7 +2,7 @@
 
 This project focuses on cleaning and analyzing US Household Income data at the State, City, and County levels. The primary goal was to merge geographic data with economic statistics to identify wealth distribution patterns across the United States.
 
-###💡 Key Insights & Findings
+### 💡 Key Insights & Findings
 * Regional Disparities: The analysis clearly showed a high concentration of wealth in specific "Types" of municipalities, with Boroughs often outperforming standard Cities in average income.
 
 * Data Correlation: There was a notable (though not absolute) correlation between land area and household count in certain regions.
