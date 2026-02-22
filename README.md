@@ -1,42 +1,40 @@
-# USA Household Income: Data Cleaning & EDA
+# Graphic artwork statistics
 
-This project focuses on cleaning and analyzing US Household Income data at the State, City, and County levels. The primary goal was to merge geographic data with economic statistics to identify wealth distribution patterns across the United States.
+This is a personal project that I have wanted to complete ever since I started working with SQL. During my years as a Senior Designer in a Retail HQ, I've wanted to calculate the number of individual artworks we have worked on in a given year or multiple years across different brands. It's a relatively simple project but trying to find the data and manipulate it was a difficult endeavour.
 
 ### 💡 Key Insights & Findings
-* Regional Disparities: The analysis clearly showed a high concentration of wealth in specific "Types" of municipalities, with Boroughs often outperforming standard Cities in average income.
+* Total number of artworks for print run briefs: **Just over 30,000**. This does not include the ad-hoc projects.
 
-* Data Correlation: There was a notable (though not absolute) correlation between land area and household count in certain regions.
+* Higest number of artworks in a single month: **2,000 artworks in August 2023**.
 
-* Top Performers: [Insert a specific finding here, e.g., "Maryland and New Jersey emerged as top-tier states for median household income in this dataset."]
+* Large print runs vs Medium print runs: **33% Large vs 67% medium**. Large = anything over 500 artworks in a single month.
 
 ### 📁 Dataset Overview
-The dataset contains life expectancy data for various countries over a 15-year period, including variables like GDP, Adult Mortality, and status (Developed vs. Developing).
+This dataset was downloaded from the printers portal that i had access to. I downloaded the report which covered every single item that had been sent to print. I filtered the data from DEC 2021. I downloaded 3 x csv files for 3 different brands. 
 
 🛠️ Key Technical Skills includes:  
-<ins>Relational Data Management:</ins> Performing INNER JOINS to connect geographic data with income statistics.
+<ins>Data Cleaning</ins> A lot of redundant data that needed to be dropped. The date column was incorrectly boughtinto MySQL as text which I had to correct. 
 
-<ins>Advanced Data Scrubbing:</ins> Standardizing "State Name" typos, fixing "City" casing issues, and managing 0 values in land/water area measurements..
+<ins>Advanced Data Scrubbing:</ins> Using regular expressions and LIKE clauses, I filtered the data set to gather the rows i needed. 
 
-<ins>Statistical Analysis:</ins> Using AVG, MEDIAN (logic-based), and COUNT to rank economic performance by region and "Type" (e.g., City, Borough, CDP, Town).
+<ins>Statistical Analysis:</ins> Once I exported the dataset out from MySQL as a csv, I imported this into Excel to finish my data cleaning to remove further unwanted rows and performed initial data analysis using Pivot Tables. I also incorporated an IF statement to categorise the data to give my Medium and Large print runs.
 
 
 
 ### 🧹 Phase 1: Data Cleaning Highlights
-The raw data contained several structural issues that required SQL intervention:
+The raw data contained several columns that had no meaning for my objective. It was also missing a brand column as I intended to append the 3 tables in MySQL. 
 
-Duplicate ID Removal: Used ROW_NUMBER() to identify and remove duplicate entries based on unique id values.
-
-Geographic Standardization: Fixed "State_Name" inconsistencies (e.g., converting 'alabama' to 'Alabama') and cleaned up the "State_ab" fields.
-
-Zero-Value Management: Filtered out records where ALand or AWater were 0 or Null to ensure geographic calculations remained accurate.
+Date column data type: MySQL brought in the date column as a text field which had to be rectified using the STR_TO_DATE function.
 
 
 
 ### 📊 Phase 2: Exploratory Data Analysis
-With the tables cleaned and joined, I explored several key economic questions:
+With the tables cleaned and joined, I exported a csv file that I could use in excel to perform EDA and build a dashboard to showcase the derived stats. 
 
-Top & Bottom Earners: Which states boast the highest average income? (Filtering out outliers with low sample sizes).
+Line chart to show trend from DEC 2021 - FEB 2026.  
 
-The "Type" Factor: How does income differ between a "Borough," a "City," and a "Village"?
+Pie chart to show a split of Large print run vs a Medium print run during DEC 2021 - FEB 2026.
 
-Wealth Distribution: Identifying the top 10 wealthiest cities in the highest-earning states.
+Bar chart to show the number of print runs during DEC 2021 - FEB 2026.
+
+KPI card to show the number of individual artworks sent to print during DEC 2021 - FEB 2026.
