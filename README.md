@@ -1,4 +1,4 @@
-# Graphic artwork statistics SQL|Excel
+# Graphic artwork statistics SQL | Excel
 
 This is a personal project that I have wanted to complete ever since I started working with SQL. During my years as a Senior Designer in a Retail HQ, I've wanted to calculate the number of individual artworks we have worked on in a given year or multiple years across different brands. It's a relatively simple project but trying to find the data and manipulate it was a difficult endeavour.
 
