@@ -9,6 +9,10 @@ This is a personal project that I have wanted to complete ever since I started w
 
 * Large print runs vs Medium print runs: **33% Large vs 67% medium**. Large = anything over 500 artworks in a single month.
 
+  
+![Graphics Artworks Excel Visualisations Scrrenshot](images/Graphics_Artworks_Excel_Screenshot.png)
+
+
 ### 📁 Dataset Overview
 This dataset was downloaded from the printers portal that i had access to. I downloaded the report which covered every single item that had been sent to print. I filtered the data from DEC 2021. I downloaded 3 x csv files for 3 different brands. 
 
